@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const signup = async (username, email, password) => {
-    const res = await axios.post("http://localhost:3002/auth/signup", {
+    const res = await axios.post("https://zerodha-clone-backend-gamma.vercel.app/auth/signup", {
       username,
       email,
       password,
