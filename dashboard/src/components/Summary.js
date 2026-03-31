@@ -12,7 +12,7 @@ const Summary = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3002/allHoldings", {
+      .get("https://zerodha-clone-backend-gamma.vercel.app/allHoldings", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
