@@ -9,7 +9,7 @@ const Orders = () => {
   const fetchOrders = () => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3002/allOrders", {
+      .get("https://zerodha-clone-backend-gamma.vercel.app/allOrders", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
