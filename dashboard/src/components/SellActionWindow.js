@@ -15,7 +15,7 @@ const SellActionWindow = ({ uid }) => {
     const token = localStorage.getItem("token");
     axios
       .post(
-        "http://localhost:3002/newOrder",
+        "https://zerodha-clone-backend-gamma.vercel.app/newOrder",
         {
           name: uid,
           qty: stockQuantity,
