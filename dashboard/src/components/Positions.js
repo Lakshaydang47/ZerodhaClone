@@ -8,7 +8,7 @@ const Positions = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3002/allPositions", {
+      .get("https://zerodha-clone-backend-gamma.vercel.app/allPositions", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
