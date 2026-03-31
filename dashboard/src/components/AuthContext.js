@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
       const storedToken = localStorage.getItem("token");
       if (storedToken) {
         try {
-          const res = await axios.get("http://localhost:3002/auth/user", {
+          const res = await axios.get("https://zerodha-clone-backend-gamma.vercel.app/auth/user", {
             headers: { Authorization: `Bearer ${storedToken}` },
           });
           setUser(res.data);
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (email, password) => {
-    const res = await axios.post("http://localhost:3002/auth/login", {
+    const res = await axios.post("https://zerodha-clone-backend-gamma.vercel.app/auth/login", {
       email,
       password,
     });
