@@ -29,7 +29,7 @@ const Orders = () => {
   const handleCancelOrder = (id) => {
     const token = localStorage.getItem("token");
     axios
-      .delete(`http://localhost:3002/deleteOrder/${id}`, {
+      .delete(`https://zerodha-clone-backend-gamma.vercel.app/deleteOrder/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
